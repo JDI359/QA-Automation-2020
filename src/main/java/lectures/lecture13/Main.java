@@ -1,0 +1,26 @@
+package lectures.lecture13;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class Main {
+
+    public static void main(String[] args) {
+        QualityEngineer qa = new QualityEngineer("Kiril", 25, true);
+        BusinessAnalyst ba = new BusinessAnalyst("Elena", 75);
+        LeadDeveloper dev =  new LeadDeveloper("Galina", 35);
+
+        //Overridden toString() method from Employee class
+        log.info(qa.toString());
+        log.info(ba.toString());
+
+        qa.getSalary(20, 100);
+        qa.getSalary(20,100,500);
+
+        ba.getDailyRate();
+        qa.getDailyRate();
+        dev.leadProject();
+        dev.managePeople();
+
+    }
+}
